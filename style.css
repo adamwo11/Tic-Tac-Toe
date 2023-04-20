@@ -1,0 +1,20 @@
+article{
+    border: 1px solid black;
+    width: 200px;
+    height: 200px;
+}
+.topRow{
+    display: flex;
+}
+.X {
+    background-color: blue ;
+}
+.O {
+    background-color: rgb(247, 11, 231);
+}
+.middleRow{
+    display: flex;
+}
+.bottomRow{
+    display: flex;
+}

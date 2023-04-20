@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <main>
+    <section class="topRow">
+        <article id="L1">1</article>
+        <article id="M2">2</article>
+        <article id="R3">3</article>
+      
+    </section>
+    <section class="middleRow">
+        <article id="L4">4</article>
+        <article id="M5">5</article>
+        <article id="R6">6</article>
+    </section>
+    <section class="bottomRow">
+    <article id="L7">7</article>
+    <article id="M8">8</article>
+    <article id="R9">9</article>
+</section>
+    </main>
+</body>
+<script>
+//     Render a game in the browser
+// Switch turns between more than one player
+// Design logic for winning & visually display which player won
+// Include separate HTML / CSS / JavaScript files
+// Stick with KISS (Keep It Simple Stupid) principles
+// Use Javascript for DOM manipulation
+// Deploy your game online, where the rest of the world can access it
+// Use semantic markup for HTML and CSS (adhere to best practices)
+
+/// top
+
+var topRow = document.querySelector('.topRow')
+var L1 = document.querySelector('#L1');
+L1.addEventListener('click', function (){
+    L1.className = 'X' || 'O'
+});
+var M2 = document.querySelector('#M2');
+M2.addEventListener('click', function (){
+    M2.className = 'X'
+});
+var R3 = document.querySelector('#R3');
+R3.addEventListener('click', function (){
+    R3.className = 'O'
+});
+//// middle
+var middleRow = document.querySelector('.middleRow')
+var L4 = document.querySelector('#L4');
+L4.addEventListener('click', function (){
+    L4.className = 'X' || 'O'
+});
+var M5 = document.querySelector('#M5');
+M5.addEventListener('click', function (){
+    M5.className = 'X'
+});
+var R6 = document.querySelector('#R6');
+R6.addEventListener('click', function (){
+    R6.className = 'X'
+});
+/// bottom
+var bottomRow = document.querySelector('.bottomRow')
+var L7 = document.querySelector('#L7');
+L7.addEventListener('click', function (){
+    L7.className = 'X' || 'O'
+});
+var M8 = document.querySelector('#M8');
+M8.addEventListener('click', function (){
+    M8.className = 'X' || 'O'
+});
+var R9 = document.querySelector('#R9');
+R9.addEventListener('click', function (){
+    R9.className = 'X'
+});
+
+
+// var xTurns = 0
+// var oTurns = 1
+// if(xTurns.className  === 'X'){
+//     console.log('X')}
+// } else { (oTurns.className === 'O')}
+
+// i was wondering how i was supposed to execute this one abit easier but i couldnt figure it out without a for loop involved in my problem 
+
+
+// for(i = 0; i <= 8; i++){
+//     if(i % 2 == 0)
+// console.log(i)
+// }
+
+// for(p = 1; p < 9 ; p++){
+//     if(p % 1 == 0)
+//     console.log(p)
+
+</script>
+</html>
