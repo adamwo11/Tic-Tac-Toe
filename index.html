@@ -11,19 +11,19 @@
     <main>
     <section class="grid"> 
         <div class="div1">
-            <article id="L1">1</article>
-            <article id="M2">2</article>
-            <article id="R3">3</article> 
+            <article id="L1"></article>
+            <article id="M2"></article>
+            <article id="R3"></article> 
         </div>
         <div class="div2">        
-            <article id="L4">4</article>
-            <article id="M5">5</article>
-            <article id="R6">6</article>
+            <article id="L4"></article>
+            <article id="M5"></article>
+            <article id="R6"></article>
         </div>    
         <div class="div3">       
-            <article id="L7">7</article>
-            <article id="M8">8</article>
-            <article id="R9">9</article>
+            <article id="L7"></article>
+            <article id="M8"></article>
+            <article id="R9"></article>
         </div>          
        
     </section>
@@ -52,14 +52,10 @@ var turn = 'X'
 var grid = document.querySelector('.grid')
 var L1 = document.querySelector('#L1');
 L1.addEventListener('click', function (){
-    L1.className = turn
-    
+    L1.className = turn 
 if(turn  === 'X'){
-    console.log('X')
     turn = 'O'
-
 } else { 
-    console.log('O')
     turn = 'X'
 }
 });
@@ -67,11 +63,8 @@ var M2 = document.querySelector('#M2');
 M2.addEventListener('click', function (){
     M2.className = turn
     if(turn  === 'X'){
-    console.log('X')
     turn = 'O'
-
 } else { 
-    console.log('O')
     turn = 'X'
 }
 });
@@ -79,11 +72,8 @@ var R3 = document.querySelector('#R3');
 R3.addEventListener('click', function (){
     R3.className = turn
     if(turn  === 'X'){
-    console.log('X')
     turn = 'O'
-
 } else { 
-    console.log('O')
     turn = 'X'
 }
 });
@@ -92,11 +82,8 @@ var L4 = document.querySelector('#L4');
 L4.addEventListener('click', function (){
     L4.className = turn
     if(turn  === 'X'){
-    console.log('X')
     turn = 'O'
-
 } else { 
-    console.log('O')
     turn = 'X'
 }
 });
@@ -104,11 +91,8 @@ var M5 = document.querySelector('#M5');
 M5.addEventListener('click', function (){
     M5.className = turn
     if(turn  === 'X'){
-    console.log('X')
     turn = 'O'
-
 } else { 
-    console.log('O')
     turn = 'X'
 }
 });
@@ -116,11 +100,8 @@ var R6 = document.querySelector('#R6');
 R6.addEventListener('click', function (){
     R6.className = turn
     if(turn  === 'X'){
-    console.log('X')
     turn = 'O'
-
 } else { 
-    console.log('O')
     turn = 'X'
 }
 });
@@ -129,11 +110,8 @@ var L7 = document.querySelector('#L7');
 L7.addEventListener('click', function (){
     L7.className = turn
     if(turn  === 'X'){
-    console.log('X')
     turn = 'O'
-
 } else { 
-    console.log('O')
     turn = 'X'
 }
 });
@@ -141,11 +119,8 @@ var M8 = document.querySelector('#M8');
 M8.addEventListener('click', function (){
     M8.className = turn
     if(turn  === 'X'){
-    console.log('X')
     turn = 'O'
-
 } else { 
-    console.log('O')
     turn = 'X'
 }
 });
@@ -153,21 +128,13 @@ var R9 = document.querySelector('#R9');
 R9.addEventListener('click', function (){
     R9.className = turn
     if(turn  === 'X'){
-    console.log('X')
     turn = 'O'
-
 } else { 
-    console.log('O')
     turn = 'X'
 }
 });
-// Row Wins
+// 'X or purple wins'
 grid.addEventListener('click', function (event){
-//horizontals
-    console.log(event.target)
-    console.log(L1.className === turn)
-    console.log(M2.className === turn)
-    console.log(R3.className === turn)
     if(L1.className === 'X'
     && M2.className === 'X'
     && R3.className === 'X'){
@@ -175,10 +142,6 @@ grid.addEventListener('click', function (event){
         M2.className = 'Win'
         R3.className = 'Win'
     }
-    console.log(event.target)
-    console.log(L4.className === turn)
-    console.log(M5.className === turn)
-    console.log(R6.className === turn)
     if(L4.className === 'X'
     && M5.className === 'X'
     && R6.className === 'X'){
@@ -186,10 +149,6 @@ grid.addEventListener('click', function (event){
         M5.className = 'Win'
         R6.className = 'Win'
     }
-    console.log(event.target)
-    console.log(L7.className === turn)
-    console.log(M8.className === turn)
-    console.log(R9.className === turn)
     if(L7.className === 'X'
     && M8.className === 'X'
     && R9.className === 'X'){
@@ -198,10 +157,6 @@ grid.addEventListener('click', function (event){
         R9.className = 'Win'
     }
 //diagonals
-    console.log(event.target)
-    console.log(L1.className === turn)
-    console.log(M5.className === turn)
-    console.log(R9.className === turn)
     if(L1.className === 'X'
     && M5.className === 'X'
     && R9.className === 'X'){
@@ -209,10 +164,6 @@ grid.addEventListener('click', function (event){
         M5.className = 'Win'
         R9.className = 'Win'
     }
-    console.log(event.target)
-    console.log(R3.className === turn)
-    console.log(M5.className === turn)
-    console.log(L7.className === turn)
     if(R3.className === 'X'
     && M5.className === 'X'
     && L7.className === 'X'){
@@ -221,21 +172,14 @@ grid.addEventListener('click', function (event){
         L7.className = 'Win'
     }
 //verticals
-    console.log(event.target)
-    console.log(L1.className === turn)
-    console.log(L4.className === turn)
-    console.log(L7.className === turn)
-    if(L1.className === 'X' 
+    if(L1.className === 'X'
     && L4.className === 'X' 
     && L7.className === 'X' ){
         L1.className = 'Win'
         L4.className = 'Win'
         L7.className = 'Win'
     }
-    console.log(event.target)
-    console.log(M2.className === 'X')
-    console.log(M5.className === 'X')
-    console.log(M8.className === 'X')
+  
     if(M2.className === 'X'
     && M5.className === 'X'
     && M8.className === 'X'){
@@ -243,10 +187,7 @@ grid.addEventListener('click', function (event){
         M5.className = 'Win'
         M8.className = 'Win'
     }
-    console.log(event.target)
-    console.log(R3.className === 'X')
-    console.log(R6.className === 'X')
-    console.log(R9.className === 'X')
+
     if(R3.className === 'X'
     && R6.className === 'X'
     && R9.className === 'X'){
@@ -255,11 +196,72 @@ grid.addEventListener('click', function (event){
         R9.className = 'Win'
     }
 }) 
-function checkScore() {
-        document.querySelectorAll('.grid')
-        const winningCombos = [[0,1,2], [3,4,5], [6,7,8],
-        [0,3,6], [1,4,7], [2,5,8], [0,4,8], [2,4,6] ]
-        if( winningCombos = ''){
+// 'O' or Blue wins
+grid.addEventListener('click', function (event){
+    if(L1.className === 'O'
+    && M2.className === 'O'
+    && R3.className === 'O'){
+        L1.className = 'Win'
+        M2.className = 'Win'
+        R3.className = 'Win'
+    }
+    if(L4.className === 'O'
+    && M5.className === 'O'
+    && R6.className === 'O'){
+        L4.className = 'Win'
+        M5.className = 'Win'
+        R6.className = 'Win'
+    }
+    if(L7.className === 'O'
+    && M8.className === 'O'
+    && R9.className === 'O'){
+        L7.className = 'Win'
+        M8.className = 'Win'
+        R9.className = 'Win'
+    }
+    //diagonals
+    if(L1.className === 'O'
+    && M5.className === 'O'
+    && R9.className === 'O'){
+        L1.className = 'Win'
+        M5.className = 'Win'
+        R9.className = 'Win'
+    }
+    if(R3.className === 'O'
+    && M5.className === 'O'
+    && L7.className === 'O'){
+        R3.className = 'Win'
+        M5.className = 'Win'
+        L7.className = 'Win'
+    }
+    //verticals
+    if(L1.className === 'O'
+    && L4.className === 'O' 
+    && L7.className === 'O' ){
+        L1.className = 'Win'
+        L4.className = 'Win'
+        L7.className = 'Win'
+    }
+    if(M2.className === 'O'
+    && M5.className === 'O'
+    && M8.className === 'O'){
+        M2.className = 'Win'
+        M5.className = 'Win'
+        M8.className = 'Win'
+    }
+    if(R3.className === 'O'
+    && R6.className === 'O'
+    && R9.className === 'O'){
+        R3.className = 'Win'
+        R6.className = 'Win'
+        R9.className = 'Win'
+    }
+}) 
+function checkScore(event) {
+        document.querySelector('.grid')
+        const winningCombos = [[0], [1], [2],
+        [3], [4], [5], [6], [7]]
+        if( winningCombos.className = 'Win'){
             console.log('you win!')
         }
 }
