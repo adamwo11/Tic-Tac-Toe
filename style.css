@@ -3,15 +3,16 @@ article{
     width: 200px;
     height: 170px;
 }
-nav{
-    border: 1px solid black;
-    width: 400px;
-    height: 170px;
+.div1{
     display: flex;
 }
-.topRow{
+.div2{
     display: flex;
 }
+.div3{
+    display: flex;
+}
+
 .X{
     background-color: violet;
 }
@@ -20,10 +21,4 @@ nav{
 }
 .Win {
     background-color: yellow;
-}
-.middleRow{
-    display: flex;
-}
-.bottomRow{
-    display: flex;
 }
