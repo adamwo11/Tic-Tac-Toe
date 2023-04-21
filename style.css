@@ -1,7 +1,13 @@
 article{
     border: 1px solid black;
     width: 200px;
-    height: 200px;
+    height: 170px;
+}
+nav{
+    border: 1px solid black;
+    width: 400px;
+    height: 170px;
+    display: flex;
 }
 .topRow{
     display: flex;

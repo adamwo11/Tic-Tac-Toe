@@ -10,21 +10,26 @@
 <body>
     <main>
     <section class="topRow">
+        <nav class="diagonals">
         <article id="L1">1</article>
         <article id="M2">2</article>
         <article id="R3">3</article>
-      
+        </nav>
     </section>
     <section class="middleRow">
+        <nav class="diagonals">
         <article id="L4">4</article>
         <article id="M5">5</article>
         <article id="R6">6</article>
+        </nav>
     </section>
     <section class="bottomRow">
-    <article id="L7">7</article>
-    <article id="M8">8</article>
-    <article id="R9">9</article>
-</section>
+        <nav class="diagonals">
+        <article id="L7">7</article>
+        <article id="M8">8</article>
+        <article id="R9">9</article>
+    </nav>
+    </section>
     </main>
 </body>
 <script>
@@ -36,9 +41,7 @@
 // Use Javascript for DOM manipulation
 // Deploy your game online, where the rest of the world can access it
 // Use semantic markup for HTML and CSS (adhere to best practices)
-function checkScore() {
-const win = [0,1,2], [3,4,5], [6,7]
-}
+
 /// top
 let go = 'O'
 var topRow = document.querySelector('.topRow')
@@ -82,7 +85,7 @@ var R9 = document.querySelector('#R9');
 R9.addEventListener('click', function (){
     R9.className = 'X'
 });
-
+// Row Wins
 topRow.addEventListener('click', function (event){
     console.log(event.target)
     console.log(L1.className === 'X')
@@ -109,30 +112,103 @@ middleRow.addEventListener('click', function (event){
         R6.className = 'Win'
     }
 })
-topRow.addEventListener('click', function (event){
+bottomRow.addEventListener('click', function (event){
+    console.log(event.target)
+    console.log(L7.className === 'X')
+    console.log(M8.className === 'X')
+    console.log(R9.className === 'X')
+    if(L7.className === 'X'
+    && M8.className === 'X'
+    && R9.className === 'X'){
+        L7.className = 'Win'
+        M8.className = 'Win'
+        R9.className = 'Win'
+    }
+}) 
+//Diagonal wins
+diagonals.addEventListener('click', function (event){
     console.log(event.target)
     console.log(L1.className === 'X')
-    console.log(M2.className === 'X')
-    console.log(R3.className === 'X')
+    console.log(M5.className === 'X')
+    console.log(R9.className === 'X')
     if(L1.className === 'X'
-    && M2.className === 'X'
-    && R3.className === 'X'){
+    && M5.className === 'X'
+    && R9.className === 'X'){
         L1.className = 'Win'
-        M2.className = 'Win'
-        R3.className = 'Win'
+        M5.className = 'Win'
+        R9.className = 'Win'
     }
 })
-var xTurns = 0
-var oTurns = 1
-if(xTurns.className  === 'X'){
-    console.log('X')
-} else { (oTurns.className === 'O')}
+diagonals.addEventListener('click', function (event){
+    console.log(event.target)
+    console.log(L1.className === 'X')
+    console.log(M5.className === 'X')
+    console.log(R9.className === 'X')
+    if(L1.className === 'X'
+    && M5.className === 'X'
+    && R9.className === 'X'){
+        L1.className = 'Win'
+        M5.className = 'Win'
+        R9.className = 'Win'
+    }
+})
+//Vertical wins
+diagonals.addEventListener('click', function (event){
+    console.log(event.target)
+    console.log(L1.className === 'X')
+    console.log(M5.className === 'X')
+    console.log(R9.className === 'X')
+    if(L1.className === 'X'
+    && M5.className === 'X'
+    && R9.className === 'X'){
+        L1.className = 'Win'
+        M5.className = 'Win'
+        R9.className = 'Win'
+    }
+})
+diagonals.addEventListener('click', function (event){
+    console.log(event.target)
+    console.log(L1.className === 'X')
+    console.log(M5.className === 'X')
+    console.log(R9.className === 'X')
+    if(L1.className === 'X'
+    && M5.className === 'X'
+    && R9.className === 'X'){
+        L1.className = 'Win'
+        M5.className = 'Win'
+        R9.className = 'Win'
+    }
+})
+diagonals.addEventListener('click', function (event){
+    console.log(event.target)
+    console.log(L1.className === 'X')
+    console.log(M5.className === 'X')
+    console.log(R9.className === 'X')
+    if(L1.className === 'X'
+    && M5.className === 'X'
+    && R9.className === 'X'){
+        L1.className = 'Win'
+        M5.className = 'Win'
+        R9.className = 'Win'
+    }
+})
+// function checkScore() {
+//         document.querySelectorAll('section')
+// const winningCombos = [ [0,1,2], [3,4,5], [6,7,8],
+//  [0,3,6], [1,4,7], [2,5,8], [0,4,8], [2,4,6] ]
+// }
+//     winningCombos[0].addEventListener('click', function (event){
+//     if(winningCombos[0] === 'X'){
+//         winningCombos[0].className = 'Win'
+//     }
+// })
+// var xTurns = 0
+// var oTurns = 1
+// if(xTurns.className  === 'X'){
+//     console.log('X')
+// } else { (oTurns.className === 'O')}
 
-if(xTurns = ){
 
-    function checkScore() {
-const win = [0,1,2], [3,4,5], [6,7]
-}
 // i was wondering how i was supposed to execute this one abit easier but i couldnt figure it out without a for loop involved in my problem 
 
 </script>
