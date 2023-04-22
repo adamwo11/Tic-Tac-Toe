@@ -30,14 +30,14 @@
     </main>
 </body>
 <script>
-    var turn = 'X'
-if(turn  === 'X'){
-    console.log('X')
-    turn = 'O'
-} else { 
-    console.log('O')
-    turn = 'X'
-}
+//     var turn = 'X'
+// if(turn  === 'X'){
+//     console.log('X')
+//     turn = 'O'
+// } else { 
+//     console.log('O')
+//     turn = 'X'
+// }
 //     Render a game in the browser
 // Switch turns between more than one player
 // Design logic for winning & visually display which player won
@@ -49,15 +49,24 @@ if(turn  === 'X'){
 
 /// top
 var turn = 'X'
-var grid = document.querySelector('.grid')
+var grid = document.querySelector('.grid');
+// grid.forEach((turn), function(){
+//     turn.addEventListener('click', ()=>{
+//         if(!turn.disabled){
+//             turn.disabled = true;
+//         }
+
 var L1 = document.querySelector('#L1');
+// var squares = document.querySelectorAll('')
 L1.addEventListener('click', function (){
     L1.className = turn 
+    if(L1)
 if(turn  === 'X'){
     turn = 'O'
 } else { 
     turn = 'X'
 }
+L1.removeEventListener('click', arguments.callee);
 });
 var M2 = document.querySelector('#M2');
 M2.addEventListener('click', function (){
@@ -67,6 +76,7 @@ M2.addEventListener('click', function (){
 } else { 
     turn = 'X'
 }
+M2.removeEventListener('click', arguments.callee);
 });
 var R3 = document.querySelector('#R3');
 R3.addEventListener('click', function (){
@@ -76,6 +86,7 @@ R3.addEventListener('click', function (){
 } else { 
     turn = 'X'
 }
+R3.removeEventListener('click', arguments.callee);
 });
 //// middle
 var L4 = document.querySelector('#L4');
@@ -86,6 +97,7 @@ L4.addEventListener('click', function (){
 } else { 
     turn = 'X'
 }
+L4.removeEventListener('click', arguments.callee);
 });
 var M5 = document.querySelector('#M5');
 M5.addEventListener('click', function (){
@@ -95,6 +107,7 @@ M5.addEventListener('click', function (){
 } else { 
     turn = 'X'
 }
+M5.removeEventListener('click', arguments.callee);
 });
 var R6 = document.querySelector('#R6');
 R6.addEventListener('click', function (){
@@ -103,7 +116,7 @@ R6.addEventListener('click', function (){
     turn = 'O'
 } else { 
     turn = 'X'
-}
+}R6.removeEventListener('click', arguments.callee);
 });
 /// bottom
 var L7 = document.querySelector('#L7');
@@ -114,6 +127,7 @@ L7.addEventListener('click', function (){
 } else { 
     turn = 'X'
 }
+L7.removeEventListener('click', arguments.callee);
 });
 var M8 = document.querySelector('#M8');
 M8.addEventListener('click', function (){
@@ -123,6 +137,7 @@ M8.addEventListener('click', function (){
 } else { 
     turn = 'X'
 }
+M8.removeEventListener('click', arguments.callee);
 });
 var R9 = document.querySelector('#R9');
 R9.addEventListener('click', function (){
@@ -132,7 +147,10 @@ R9.addEventListener('click', function (){
 } else { 
     turn = 'X'
 }
+R9.removeEventListener('click', arguments.callee);
 });
+// })
+// })
 // 'X or purple wins'
 grid.addEventListener('click', function (event){
     if(L1.className === 'X'
@@ -256,84 +274,31 @@ grid.addEventListener('click', function (event){
         R6.className = 'Win'
         R9.className = 'Win'
     }
-}) 
-function checkScore(event) {
-        document.querySelector('.grid')
-        const winningCombos = [[0], [1], [2],
-        [3], [4], [5], [6], [7]]
-        if( winningCombos.className = 'Win'){
+    document.querySelector('.grid')
+        var winningCombos = [[L1,M2,R3], [L1,L4,L7], [L1,M5,R9], [M2,M5,M8], [R3,R6,R9], [L4,M5,R6], [L7,M8,R9]]
+
+ 
+        if('X' === winningCombos[[]]){
             console.log('you win!')
+        } else {
+            winningCombos === false
+            console.log('it was a draw')
         }
-}
-// })
+        if(turn === grid.length){
+            console.log('gameover')
+        }
 
-// diagonals.addEventListener('click', function (event){
-//     console.log(event.target)
-//     console.log(L1.className === 'X')
-//     console.log(M5.className === 'X')
-//     console.log(R9.className === 'X')
-//     if(L1.className === 'X'
-//     && M5.className === 'X'
-//     && R9.className === 'X'){
-//         L1.className = 'Win'
-//         M5.className = 'Win'
-//         R9.className = 'Win'
-//     }
-// })
-// //Vertical wins
-// diagonals.addEventListener('click', function (event){
-//     console.log(event.target)
-//     console.log(L1.className === 'X')
-//     console.log(M5.className === 'X')
-//     console.log(R9.className === 'X')
-//     if(L1.className === 'X'
-//     && M5.className === 'X'
-//     && R9.className === 'X'){
-//         L1.className = 'Win'
-//         M5.className = 'Win'
-//         R9.className = 'Win'
-//     }
-// })
-// diagonals.addEventListener('click', function (event){
-//     console.log(event.target)
-//     console.log(L1.className === 'X')
-//     console.log(M5.className === 'X')
-//     console.log(R9.className === 'X')
-//     if(L1.className === 'X'
-//     && M5.className === 'X'
-//     && R9.className === 'X'){
-//         L1.className = 'Win'
-//         M5.className = 'Win'
-//         R9.className = 'Win'
-//     }
-// })
-// diagonals.addEventListener('click', function (event){
-//     console.log(event.target)
-//     console.log(L1.className === 'X')
-//     console.log(M5.className === 'X')
-//     console.log(R9.className === 'X')
-//     if(L1.className === 'X'
-//     && M5.className === 'X'
-//     && R9.className === 'X'){
-//         L1.className = 'Win'
-//         M5.className = 'Win'
-//         R9.className = 'Win'
-//     }
-// })
-// function checkScore() {
-//         document.querySelectorAll('section')
-// const winningCombos = [ [0,1,2], [3,4,5], [6,7,8],
-//  [0,3,6], [1,4,7], [2,5,8], [0,4,8], [2,4,6] ]
-// }
-//     winningCombos[0].addEventListener('click', function (event){
-//     if(winningCombos[0] === 'X'){
-//         winningCombos[0].className = 'Win'
-//     }
-// })
-
-
-
-// i was wondering how i was supposed to execute this one abit easier but i couldnt figure it out without a for loop involved in my problem 
-
-</script>
+}) 
+        // document.querySelector('.grid')
+        // const winningCombos = [[L1,M2,R3], [L1,L4,L7], [L1,M5,R9],[M2,M5,M8], [R3,R6,R9], [L4,M5,R6], [L7,M8,R9]]
+        // if( winningCombos[[]] === turn){
+        //     console.log('you win!')
+        // } else {
+        //     winningCombos != 'Win'
+        //     console.log('it was a draw')
+        // }
+//         if(i = 0; i < turn.length; i++){
+//             console.log(i)
+//         }
+// </script>
 </html>
