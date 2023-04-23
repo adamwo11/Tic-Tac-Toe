@@ -25,20 +25,12 @@
             <article id="M8"></article>
             <article id="R9"></article>
         </div>          
-       
+       <button class="game-restart">Restart Game</button>
     </section>
     </main>
 </body>
 <script>
-//     var turn = 'X'
-// if(turn  === 'X'){
-//     console.log('X')
-//     turn = 'O'
-// } else { 
-//     console.log('O')
-//     turn = 'X'
-// }
-//     Render a game in the browser
+// Render a game in the browser
 // Switch turns between more than one player
 // Design logic for winning & visually display which player won
 // Include separate HTML / CSS / JavaScript files
@@ -50,12 +42,6 @@
 /// top
 var turn = 'X'
 var grid = document.querySelector('.grid');
-// grid.forEach((turn), function(){
-//     turn.addEventListener('click', ()=>{
-//         if(!turn.disabled){
-//             turn.disabled = true;
-//         }
-
 var L1 = document.querySelector('#L1');
 // var squares = document.querySelectorAll('')
 L1.addEventListener('click', function (){
@@ -148,10 +134,7 @@ R9.addEventListener('click', function (){
     turn = 'X'
 }
 R9.removeEventListener('click', arguments.callee);
-});
-// })
-// })
-// 'X or purple wins'
+}); 
 grid.addEventListener('click', function (event){
     if(L1.className === 'X'
     && M2.className === 'X'
@@ -213,23 +196,42 @@ grid.addEventListener('click', function (event){
         R6.className = 'Win'
         R9.className = 'Win'
     }
-}) 
+// }) 
 // 'O' or Blue wins
-grid.addEventListener('click', function (event){
-    if(L1.className === 'O'
-    && M2.className === 'O'
-    && R3.className === 'O'){
-        L1.className = 'Win'
-        M2.className = 'Win'
-        R3.className = 'Win'
-    }
-    if(L4.className === 'O'
-    && M5.className === 'O'
-    && R6.className === 'O'){
-        L4.className = 'Win'
-        M5.className = 'Win'
-        R6.className = 'Win'
-    }
+// grid.addEventListener('click', function (event){
+//     if(L1.className === 'O'
+//     && M2.className === 'O'
+//     && R3.className === 'O'){
+//         L1.className = 'Win'
+//         M2.className = 'Win'
+//         R3.className = 'Win'
+//         console.log('you win')
+//         grid.removeEventListener('click', arguments.callee)
+//     }
+
+
+
+
+
+
+
+
+
+
+
+
+    var winningCombos = [[L1,M2,R3], [L1,L4,L7], [L1,M5,R9], [M2,M5,M8], [R3,R6,R9], [L4,M5,R6], [L7,M8,R9]]
+if(winningCombos[0] === 'O'){
+    winningCombos[0] = 'Win'
+}
+
+    // if(L4.className === 'O'
+    // && M5.className === 'O'
+    // && R6.className === 'O'){
+    //     L4.className = 'Win'
+    //     M5.className = 'Win'
+    //     R6.className = 'Win'
+    // }
     if(L7.className === 'O'
     && M8.className === 'O'
     && R9.className === 'O'){
@@ -273,22 +275,58 @@ grid.addEventListener('click', function (event){
         R3.className = 'Win'
         R6.className = 'Win'
         R9.className = 'Win'
+    } else {
+        console.log('draw')
     }
-    document.querySelector('.grid')
+    var winningCombos = [[L1,M2,R3], [L1,L4,L7], [L1,M5,R9], [M2,M5,M8], [R3,R6,R9], [L4,M5,R6], [L7,M8,R9]]
+
+    for(i = 0; i < winningCombos.length; i++){
+    if(winningCombos[[0]] = true){
+        console.log('winner')
+    }
+}
+    // document.querySelector('.grid')
         var winningCombos = [[L1,M2,R3], [L1,L4,L7], [L1,M5,R9], [M2,M5,M8], [R3,R6,R9], [L4,M5,R6], [L7,M8,R9]]
+//     for(i = 0; i < 7; i++){
+//         if(winningCombos[i] = true){
+//             const winCombo = winningCombos[i];
+//             let a = turn[winningCombos[0]];
+//             let b = turn[winningCombos[1]];
+//             let c = turn[winningCombos[2]];
+//         console.log(  winningCombos[i] + 'is the winner')
+//     } else {
+//         console.log('the game was a draw')
+//     }
+// }
+})
+// function turn() {
+//         for(i = 0; i < winningCombos.length; i++){
+//         if(winningCombos[[i]] = true){
+//         console.log( winningCombos + 'is the winner')
+//     }
+// }
+//         // checkWin()
+// }
+//     //     if(winningCombos[[0]].length === true){
+//     //         console.log('you win!')
+//     //     } else {
+//     //         winningCombos.length = false
+//     //         console.log('it was a draw')
+//     //     }
+//     // })
+//     function turn() {
+//         for(i = 0; i < winningCombos.length; i++){
+//         if(winningCombos[[i]] = true){
+//         console.log( + 'is the winner')
+//     }
+// }
+//         checkWin()
+// }
+//         if(turn === grid.length){
+//             console.log('gameover')
+//         }
 
- 
-        if('X' === winningCombos[[]]){
-            console.log('you win!')
-        } else {
-            winningCombos === false
-            console.log('it was a draw')
-        }
-        if(turn === grid.length){
-            console.log('gameover')
-        }
-
-}) 
+        
         // document.querySelector('.grid')
         // const winningCombos = [[L1,M2,R3], [L1,L4,L7], [L1,M5,R9],[M2,M5,M8], [R3,R6,R9], [L4,M5,R6], [L7,M8,R9]]
         // if( winningCombos[[]] === turn){
@@ -297,8 +335,6 @@ grid.addEventListener('click', function (event){
         //     winningCombos != 'Win'
         //     console.log('it was a draw')
         // }
-//         if(i = 0; i < turn.length; i++){
-//             console.log(i)
-//         }
-// </script>
+       
+</script>
 </html>
