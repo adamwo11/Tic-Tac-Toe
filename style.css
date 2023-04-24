@@ -12,7 +12,9 @@ article{
 .div3{
     display: flex;
 }
-
+main{
+    font-size: 50px;
+}
 .X{
     background-color: violet;
 }
